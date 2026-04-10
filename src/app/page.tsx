@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [torneos, setTorneos] = useState<any[]>([]);
@@ -20,6 +21,12 @@ export default function Home() {
           <div key={t.id} className="bg-white p-4 rounded-xl shadow-sm border">
             <p className="font-semibold">{t.nombre}</p>
             <p className="text-sm text-gray-500">{t.categoria}</p>
+            <Link
+              href={`/torneo/${t.id}`}
+              className="text-blue-500 hover:underline"
+            >
+              Ver detalles
+            </Link>
           </div>
         ))}
       </div>
