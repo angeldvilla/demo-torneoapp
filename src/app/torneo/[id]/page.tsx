@@ -1,4 +1,6 @@
 import { db } from "@/lib/db";
+import Link from "next/link";
+import GenerateMatchesButton from "@/components/matchesButton";
 
 async function getTorneo(id: string) {
   const [rows]: any = await db.query("SELECT * FROM torneos WHERE id = ?", [
@@ -26,6 +28,27 @@ async function getEquipos(grupoId: number) {
   return rows;
 }
 
+async function getPartidosConResultados(torneoId: string) {
+  const [rows]: any = await db.query(
+    `
+    SELECT 
+      p.id,
+      p.grupoId,
+      p.equipoLocalId,
+      p.equipoVisitanteId,
+      r.golesLocal,
+      r.golesVisitante
+    FROM partidos p
+    JOIN grupos g ON g.id = p.grupoId
+    LEFT JOIN resultados r ON r.partidoId = p.id
+    WHERE g.torneoId = ?
+    `,
+    [torneoId],
+  );
+
+  return rows;
+}
+
 export default async function TorneoPage({
   params,
 }: {
@@ -45,6 +68,25 @@ export default async function TorneoPage({
 
   return (
     <div className="grid gap-4">
+      <Link href="/" className="text-sm text-blue-600">
+        ← Volver a inicio
+      </Link>
+
+      <Link
+        href={`/torneo/${id}/posiciones`}
+        className="inline-block mb-4 text-sm bg-black text-white px-3 py-1 rounded"
+      >
+        Ver tabla de posiciones
+      </Link>
+
+      <Link
+        href={`/torneo/${id}/partidos`}
+        className="inline-block mb-4 text-sm bg-black text-white px-3 py-1 rounded"
+      >
+        Ver todos los partidos
+      </Link>
+
+      {/* GRUPOS */}
       {gruposConEquipos.map((g: any) => (
         <div key={g.id} className="bg-white p-4 rounded-xl shadow border">
           <p className="font-semibold mb-2">{g.nombre}</p>
@@ -56,6 +98,7 @@ export default async function TorneoPage({
               g.equipos.map((e: any) => <p key={e.id}>• {e.nombre}</p>)
             )}
           </div>
+          <GenerateMatchesButton grupoId={g.id} />
         </div>
       ))}
     </div>
