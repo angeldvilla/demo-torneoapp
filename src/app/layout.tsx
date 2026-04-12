@@ -1,8 +1,5 @@
-// src/app/layout.tsx
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Header from "@/components/header";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "TorneoApp",
-  description: "Gestión de torneos de fútbol",
+  description: "Noticias, resultados y estadísticas de torneos deportivos",
 };
 
 export default function RootLayout({
@@ -27,14 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="bg-gray-100 text-gray-900">
-        {/* HEADER */}
-        <Header />
-
+      <body className="bg-linear-to-br from-gray-50 to-blue-50 text-gray-900">
         {/* MAIN */}
-        <main className="flex-1">
-          <div className="max-w-5xl mx-auto p-4">{children}</div>
-        </main>
+        <main className="flex-1">{children}</main>
       </body>
     </html>
   );
