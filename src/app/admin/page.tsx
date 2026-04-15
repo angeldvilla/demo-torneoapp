@@ -43,12 +43,12 @@ const quickActions = [
   },
   {
     title: "Equipos",
-    href: "/admin/torneo",
+    href: "/admin/equipos",
     description: "Agrega equipos y asigna grupos",
   },
   {
     title: "Calendario",
-    href: "/admin/torneo",
+    href: "/admin/calendario",
     description: "Genera fixtures y revisa fechas",
   },
   {
