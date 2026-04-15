@@ -7,8 +7,8 @@ import Link from "next/link";
 const navItems = [
   { icon: "🏁", label: "Dashboard", href: "/admin" },
   { icon: "🏆", label: "Torneos", href: "/admin/torneo" },
-  { icon: "👥", label: "Equipos", href: "/admin/torneo" },
-  { icon: "🗓️", label: "Calendario", href: "/admin/torneo" },
+  { icon: "👥", label: "Equipos", href: "/admin/equipos" },
+  { icon: "🗓️", label: "Calendario", href: "/admin/calendario" },
   { icon: "📝", label: "Operación", href: "/admin/torneo" },
   { icon: "⚙️", label: "Configuración", href: "/admin/torneo" },
 ];
