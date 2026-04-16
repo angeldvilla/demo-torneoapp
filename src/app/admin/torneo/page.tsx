@@ -96,9 +96,9 @@ export default async function TorneoListPage() {
         </div>
       </section>
 
-      <section className="rounded-4xl bg-linear-to-br from-slate-900 to-slate-950 p-8 text-white shadow-2xl shadow-slate-950/20">
+      <section className="rounded-4xl bg-linear-to-r from-blue-600 via-cyan-500 to-emerald-500 p-8 text-white shadow-2xl shadow-slate-950/20">
         <div className="max-w-2xl">
-          <p className="text-sm uppercase tracking-[0.28em] text-cyan-300/80">
+          <p className="text-sm uppercase tracking-[0.28em] text-gray-200/80">
             Información útil
           </p>
           <h3 className="mt-4 text-2xl font-semibold">
