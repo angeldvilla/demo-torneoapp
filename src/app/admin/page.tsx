@@ -63,10 +63,10 @@ export default async function AdminDashboard() {
 
   return (
     <div className="space-y-8">
-      <section className="rounded-4xl bg-linear-to-r from-slate-950 via-slate-900 to-slate-950 p-8 text-white shadow-2xl shadow-slate-950/20 ring-1 ring-white/10">
+      <section className="rounded-4xl bg-linear-to-r from-blue-950 via-blue-900 to-blue-950 p-8 text-white shadow-2xl shadow-slate-950/20 ring-1 ring-white/10">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
-            <p className="text-sm uppercase tracking-[0.28em] text-cyan-300/80">
+            <p className="text-sm uppercase tracking-[0.28em] text-gray-200">
               Dashboard general
             </p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white">
@@ -83,7 +83,7 @@ export default async function AdminDashboard() {
             {dashboardStats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-3xl bg-slate-900/90 p-5 shadow-lg shadow-slate-950/30 ring-1 ring-white/10"
+                className="rounded-3xl bg-gray-800/90 p-5 shadow-lg shadow-slate-950/30 ring-1 ring-white/10"
               >
                 <div
                   className={`inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-linear-to-br ${stat.color} text-xl shadow-inner shadow-black/20`}
@@ -141,10 +141,10 @@ export default async function AdminDashboard() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-[1.75rem] bg-slate-950 p-6 text-white shadow-lg shadow-slate-950/20">
+          <div className="mt-8 rounded-[1.75rem] bg-linear-to-r from-blue-950 via-blue-900 to-blue-950 p-6 text-white shadow-lg shadow-slate-950/20">
             <div className="flex items-center justify-between gap-4">
               <div>
-                <p className="text-sm uppercase tracking-[0.24em] text-cyan-200/80">
+                <p className="text-sm uppercase tracking-[0.24em] text-gray-200">
                   Resumen de administración
                 </p>
                 <h3 className="mt-2 text-2xl font-semibold">
