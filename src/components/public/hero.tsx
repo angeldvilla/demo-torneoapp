@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative bg-linear-to-r from-blue-500 via-blue-400 to-green-500 text-white min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative bg-gray-900 text-white min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video or Image */}
       <div className="absolute inset-0 z-0">
         <video
@@ -18,14 +18,14 @@ export default function Hero() {
             className="w-full h-full object-cover"
           />
         </video>
-        <div className="absolute inset-0 bg-white bg-opacity-20"></div>
+        <div className="absolute inset-0 bg-opacity-20"></div>
       </div>
 
       <div className="relative z-10 text-center w-full px-8">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up text-gray-900">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up text-white">
           ⚽ Torneos de Fútbol
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-gray-700 animate-fade-in-up delay-200">
+        <p className="text-xl md:text-2xl mb-8 text-gray-300 animate-fade-in-up delay-200">
           Sigue los mejores torneos de fútbol del mundo. Resultados en tiempo
           real, clasificaciones actualizadas, estadísticas detalladas y la
           emoción del deporte rey.
@@ -34,7 +34,7 @@ export default function Hero() {
           <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
             Explorar Torneos
           </button>
-          <button className="border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
+          <button className="border-2 border-gray-600 bg-gray-600 text-white hover:border-gray-900 hover:bg-gray-900 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
             Ver Partidos en Vivo
           </button>
         </div>
